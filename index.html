@@ -526,8 +526,19 @@
 				<!-- 회원정보 -->
 				<div class="card-box pb-10">
 					<div class="h5 pd-20 mb-0">사용자 정보</div>
-					<div class="form-group mb-0">
-						<i class="dw dw-search2 search-icon"></i>
+					<!-- 검색창 -->
+					<div class="form-group mb-0" style="width: 80%; margin: 0 auto; display: flex;">
+						<button
+							type="button"
+							class="btn btn-light dropdown-toggle waves-effect"
+							data-toggle="dropdown"
+							aria-expanded="false"
+						><span class="caret">아이디</span>
+						</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="#">Dropdown link</a>
+							<a class="dropdown-item" href="#">Dropdown link</a>
+						</div>
 						<input
 							type="text"
 							class="form-control search-input"
@@ -540,7 +551,6 @@
 								role="button"
 								data-toggle="dropdown"
 							>
-								<i class="ion-arrow-down-c"></i>
 							</a>
 							<div class="dropdown-menu dropdown-menu-right">
 								<div class="form-group row">
@@ -580,10 +590,10 @@
 							</div>
 						</div>
 					</div>
-					<table class="data-table table nowrap">
+					<table class="data-table table nowrap" style="margin-top: 50px;">
 						<thead>
 							<tr>
-								<th class="table-plus">번호</th>
+								<th>번호</th>
 								<th>이름</th>
 								<th>아이디</th>
 								<th>비밀번호</th>
@@ -591,6 +601,7 @@
 								<th>이메일</th>
 								<th>휴대폰번호</th>
 								<th>자주가는 지역</th>
+								<th>프로필 사진</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -619,6 +630,9 @@
 								</td>
 								<td>
 									<span>보라매</span>
+								</td>
+								<td>
+									<span>../profile/eadgnus</span>
 								</td>
 								<td>
 									<div class="table-actions">
@@ -656,14 +670,55 @@
 											</div>
 											<div class="modal-body">
 												<table class="data-table table nowrap reverseTable">
-													<th>번호</th>
-													<th>이름</th>
-													<th>아이디</th>
-													<th>비밀번호</th>
-													<th>닉네임</th>
-													<th>이메일</th>
-													<th>휴대폰번호</th>
-													<th>자주가는 지역</th>
+													<thead>
+														<tr>
+															<td>번호</td>
+															<td>1</td>
+															<td>수정</td>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>이름</td>
+															<td>탁성대</td>
+															<td>수정</td>
+														</tr>
+														<tr>
+															<td>아이디</td>
+															<td>abcd1234</td>
+															<td>수정</td>
+														</tr>
+														<tr>
+															<td>비밀번호</td>
+															<td>********</td>
+															<td>수정</td>
+														</tr>
+														<tr>
+															<td>닉네임</td>
+															<td>탁창대</td>
+															<td>수정</td>
+														</tr>
+														<tr>
+															<td>이메일</td>
+															<td>abcd1234@naver.com</td>
+															<td>수정</td>
+														</tr>
+														<tr>
+															<td>휴대폰번호</td>
+															<td>0101111111</td>
+															<td>수정</td>
+														</tr>
+														<tr>
+															<td>자주가는 지역</td>
+															<td>강남구</td>
+															<td>수정</td>
+														</tr>
+														<tr>
+															<td>프로필 사진</td>
+															<td>../profile/eadgnus</td>
+															<td>수정</td>
+														</tr>
+													</tbody>
 												</table>
 											</div>
 											<div class="modal-footer">
@@ -719,7 +774,7 @@
 							</tr>
 							
 							
-							<tr>
+							<!-- <tr>
 								<td class="table-plus">
 									<div class="name-avatar d-flex align-items-center">
 										<div class="avatar mr-2 flex-shrink-0">
@@ -758,7 +813,7 @@
 										></a>
 									</div>
 								</td>
-							</tr>
+							</tr> -->
 						</tbody>
 					</table>
 				</div>
