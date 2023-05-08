@@ -488,9 +488,9 @@
 								<span class="mtext">문화 관리</span>
 							</a>
 							<ul class="submenu">
-								<li><a href="culture-upload.html">게시글 업로드</a></li>
-								<li><a href="culture-festa.html">축제/공연</a></li>
-								<li><a href="culture-place.html">장소/추천</a></li>
+								<li><a href="culture-upload.html">게시글 업로드</a></li> <!-- 내가 해야할것 1-->
+								<li><a href="culture-festa.html">축제/공연</a></li> <!-- 내가 해야할것 2-->
+								<li><a href="culture-place.html">장소/추천</a></li> <!-- 내가 해야할것 3-->
 							</ul>
 						</li>
 						<li class="dropdown">
@@ -525,7 +525,7 @@
 			<div class="xs-pd-20-10 pd-ltr-20">
 				<!-- 회원정보 -->
 				<div class="card-box pb-10">
-					<div class="h5 pd-20 mb-0">사용자 정보</div>
+					<div class="h5 pd-20 mb-0">행사/공연 정보</div>
 					<!-- 검색창 -->
 					<div class="form-group mb-0" style="width: 80%; margin: 0 auto; display: flex;">
 						<button
@@ -533,19 +533,24 @@
 							class="btn btn-light dropdown-toggle waves-effect"
 							data-toggle="dropdown"
 							aria-expanded="false"
-						><span class="caret">아이디</span>
+							style="width:8%; margin-bottom:25px;"
+						><span class="caret">제목</span>
 						</button>
 						<div class="dropdown-menu">
-							<a class="dropdown-item" href="#">이름</a>
-							<a class="dropdown-item" href="#">닉네임</a>
-							<a class="dropdown-item" href="#">이메일</a>
-							<a class="dropdown-item" href="#">휴대폰번호</a>
+							<a class="dropdown-item" href="#">제목</a>
+							<a class="dropdown-item" href="#">내용</a>
 						</div>
 						<input
 							type="text"
 							class="form-control search-input"
-							placeholder="Search Here" style="width: 90%;"
-						/>
+							placeholder="Search Here" style="width: 80%; margin: 0px 0px 0px 30px"/>
+							<button
+							type="button"
+							class="btn btn-secondary"
+							data-dismiss="modal"
+							style="margin-left:20px; width:8%; height:45px">
+							찾기
+						</button>
 						<div class="dropdown">
 							<a
 								class="dropdown-toggle no-arrow"
@@ -562,8 +567,7 @@
 									<div class="col-sm-12 col-md-10">
 										<input
 											class="form-control form-control-sm form-control-line"
-											type="text"
-										/>
+											type="text"/>
 									</div>
 								</div>
 								<div class="form-group row">
@@ -571,8 +575,7 @@
 									<div class="col-sm-12 col-md-10">
 										<input
 											class="form-control form-control-sm form-control-line"
-											type="text"
-										/>
+											type="text"/>
 									</div>
 								</div>
 								<div class="form-group row">
@@ -592,21 +595,22 @@
 							</div>
 						</div>
 					</div>
-					<table class="data-table table nowrap" style="margin-top: 50px;">
-						<thead>
+					<table class="data-table table nowrap" style="margin-top:50px;">
+						<thead style="text-align:center;">
 							<tr>
 								<th>번호</th>
-								<th>이름</th>
-								<th>아이디</th>
-								<th>비밀번호</th>
-								<th>닉네임</th>
-								<th>이메일</th>
-								<th>휴대폰번호</th>
-								<th>자주가는 지역</th>
-								<th>프로필 사진</th>
+								<th>이미지</th>
+								<th>제목</th>
+								<th>기간</th>
+								<th>장소</th>
+								<th>장르</th>
+								<th>세부장르</th>
+								<th>문의</th>
+								<th>수정</th>
+								
 							</tr>
 						</thead>
-						<tbody>
+						<tbody style="text-align: center;">
 							<tr>
 								<td class="table-plus">
 									<div class="name-avatar d-flex align-items-center">
@@ -615,27 +619,13 @@
 										</div>
 									</div>
 								</td>
-								<td>탁성대</td>
-								<td>abcd1234</td>
-								<td>********</td>
-								<td>탁창대</td>
-								<td>
-									<span
-										class="badge badge-pill"
-										data-bgcolor="#e7ebf5"
-										data-color="#265ed7"
-										>abcd1234@naver.com</span
-									>
-								</td>
-								<td>
-									<span>01011111111</span>
-								</td>
-								<td>
-									<span>보라매</span>
-								</td>
-								<td>
-									<span>../profile/eadgnus</span>
-								</td>
+								<td><img src="./festa.PNG" style="width:60px; height:60px;"></td>
+								<td>2023 서울시향과 함께하는 키즈 콘서트 [클래식 음악여행]</td>
+								<td>2023-05-02 ~ 2023-05-03</td>
+								<td>LG아트센터 서울 SIGNATURE 홀</td>
+								<td>공연</td>
+								<td>클래식</td>
+								<td>02-6450-7073</td>
 								<td>
 									<div class="table-actions">
 										<a
@@ -659,7 +649,7 @@
 										<div class="modal-content">
 											<div class="modal-header">
 												<h4 class="modal-title" id="myLargeModalLabel">
-													사용자 정보
+													행사/공연 정보
 												</h4>
 												<button
 													type="button"
@@ -676,49 +666,52 @@
 														<tr>
 															<td>번호</td>
 															<td>1</td>
-															<td>수정</td>
 														</tr>
 													</thead>
 													<tbody>
 														<tr>
-															<td>이름</td>
-															<td>탁성대</td>
-															<td>수정</td>
+															<td>이미지</td>
+															<td><img src="./festa.PNG" style="width:60px; height:60px;"></td>
 														</tr>
 														<tr>
-															<td>아이디</td>
-															<td>abcd1234</td>
-															<td>수정</td>
+															<td>제목</td>
+															<td>어린이날 기획 공연 : 연희집단 [THE 광대]</td>
 														</tr>
 														<tr>
-															<td>비밀번호</td>
-															<td>********</td>
-															<td>수정</td>
+															<td>장소</td>
+															<td>서울공예박물관 공예마당 (우천 시 전시1동 1층 로비)</td>
 														</tr>
 														<tr>
-															<td>닉네임</td>
-															<td>탁창대</td>
-															<td>수정</td>
+															<td>기간</td>
+															<td>2023-05-05 ~ 2023-05-05</td>
 														</tr>
 														<tr>
-															<td>이메일</td>
-															<td>abcd1234@naver.com</td>
-															<td>수정</td>
+															<td>시간</td>
+															<td>15:45~17:00</td>
 														</tr>
 														<tr>
-															<td>휴대폰번호</td>
-															<td>0101111111</td>
-															<td>수정</td>
+															<td>대상</td>
+															<td>남녀노소 누구나!</td>
 														</tr>
 														<tr>
-															<td>자주가는 지역</td>
-															<td>강남구</td>
-															<td>수정</td>
+															<td>요금</td>
+															<td>무료</td>
 														</tr>
 														<tr>
-															<td>프로필 사진</td>
-															<td>../profile/eadgnus</td>
-															<td>수정</td>
+															<td>문의</td>
+															<td>02-6450-7073</td>
+														</tr>
+														<tr>
+															<td>장르</td>
+															<td>공연</td>
+														</tr>
+														<tr>
+															<td>세부장르</td>
+															<td>연극</td>
+														</tr>
+														<tr>
+															<td>홈페이지</td>
+															<td style="font-size:9px">https://www.seoulphil.or.kr/perf/view?perfNo=5429&calendarDate=2023/05/02&langCd=ko&menuFlag=MFLG0001</td>
 														</tr>
 													</tbody>
 												</table>
@@ -732,7 +725,10 @@
 													Close
 												</button>
 												<button type="button" class="btn btn-primary">
-													Save changes
+													수정
+												</button>
+												<button type="button" class="btn btn-primary">
+													삭제
 												</button>
 											</div>
 										</div>
@@ -748,33 +744,127 @@
 										</div>
 									</div>
 								</td>
-								<td>서승수</td>
-								<td>abcd1111</td>
-								<td>********</td>
-								<td>서승수</td>
-								<td>
-									<span
-										class="badge badge-pill"
-										data-bgcolor="#e7ebf5"
-										data-color="#265ed7"
-										>abcd1111@naver.com</span
-									>
-								</td>
-								<td>
-									<span>01022222222</span>
-								</td>
-								<td>
-									<span>신림</span>
-								</td>
+								<td><img src="./festa2.png" style="width:60px; height:60px;"></td>
+								<td>광화문 어린이 축제 [봄빛소풍]</td>
+								<td>2023-05-04 ~ 2023-05-06</td>
+								<td>광화문광장 육조마당, 놀이마당</td>
+								<td>축제</td>
+								<td>문화-예술</td>
+								<td>02-6450-7073</td>
 								<td>
 									<div class="table-actions">
-										<a href="#" data-color="#265ed7"
+										<a href="#" data-color="#265ed7" style="margin:0 auto;"
 											><i class="icon-copy dw dw-edit2"></i
 										></a>
 									</div>
 								</td>
 							</tr>
-							
+							<tbody style="text-align: center;">
+								<tr>
+									<td class="table-plus">
+										<div class="name-avatar d-flex align-items-center">
+											<div class="txt">
+												<div class="weight-600">3</div>
+											</div>
+										</div>
+									</td>
+									<td><img src="./festa.PNG" style="width:60px; height:60px;"></td>
+									<td>2023 서울시향과 함께하는 키즈 콘서트 [클래식 음악여행]</td>
+									<td>2023-05-02 ~ 2023-05-03</td>
+									<td>LG아트센터 서울 SIGNATURE 홀</td>
+									<td>공연</td>
+									<td>클래식</td>
+									<td>02-6450-7073</td>
+									<td>
+										<div class="table-actions">
+											<a
+										href="#"
+										class="btn-block"
+										data-toggle="modal"
+										data-target="#bd-example-modal-lg"
+										type="button"
+									>
+												<i class="icon-copy dw dw-edit2"></i>
+											</a>
+											<div
+										class="modal fade bs-example-modal-lg"
+										id="bd-example-modal-lg"
+										tabindex="-1"
+										role="dialog"
+										aria-labelledby="myLargeModalLabel"
+										aria-hidden="true"
+									>
+										<div class="modal-dialog modal-lg modal-dialog-centered">
+											<div class="modal-content">
+												<div class="modal-header">
+													<h4 class="modal-title" id="myLargeModalLabel">
+														행사/공연 정보
+													</h4>
+													<button
+														type="button"
+														class="close"
+														data-dismiss="modal"
+														aria-hidden="true"
+													>
+														×
+													</button>
+												</div>
+												<div class="modal-body">
+													<table class="data-table table nowrap reverseTable">
+														<thead>
+															<tr>
+																<td>번호</td>
+																<td>3</td> <!-- 문제점 : 수정 칸에는 1번이 적용됨 -->
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td>이미지</td>
+																<td><img src="./festa.PNG" style="width:60px; height:60px;"></td>
+															</tr>
+															<tr>
+																<td>제목</td>
+																<td>어린이날 기획 공연 : 연희집단 [THE 광대]</td>
+															</tr>
+															<tr>
+																<td>장소</td>
+																<td>서울공예박물관 공예마당 (우천 시 전시1동 1층 로비)</td>
+															</tr>
+															<tr>
+																<td>기간</td>
+																<td>2023-05-05 ~ 2023-05-05</td>
+															</tr>
+															<tr>
+																<td>시간</td>
+																<td>15:45~17:00</td>
+															</tr>
+															<tr>
+																<td>대상</td>
+																<td>남녀노소 누구나!</td>
+															</tr>
+															<tr>
+																<td>요금</td>
+																<td>무료</td>
+															</tr>
+															<tr>
+																<td>문의</td>
+																<td>02-6450-7073</td>
+															</tr>
+															<tr>
+																<td>장르</td>
+																<td>공연</td>
+															</tr>
+															<tr>
+																<td>세부장르</td>
+																<td>연극</td>
+															</tr>
+															<tr>
+																<td>홈페이지</td>
+																<td style="font-size:9px">https://www.seoulphil.or.kr/perf/view?perfNo=5429&calendarDate=2023/05/02&langCd=ko&menuFlag=MFLG0001</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
 							
 							<!-- <tr>
 								<td class="table-plus">
