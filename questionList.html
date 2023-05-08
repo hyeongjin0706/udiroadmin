@@ -92,6 +92,27 @@
 				padding-top: 0px;
 			}
 			
+			.sorting_asc::before{
+				content:none !important;
+			}
+			.sorting_asc::after{
+				content:none !important;
+			}
+			.sorting::before{
+				content:none !important;
+			}
+			.sorting::after{
+				content:none !important;
+			}
+			.sorting_desc::after{
+				content:none !important;
+			}
+			.sorting_desc::before{
+				content:none !important;
+			}
+			.modal-body .pagination{
+				display: none !important;
+			}
 		</style>
 	</head>
 	<body>
@@ -657,51 +678,29 @@
 												<table class="data-table table nowrap reverseTable">
 													<thead>
 														<tr>
-															<td>번호</td>
+															<td>문의 번호</td>
 															<td>1</td>
-															<td>수정</td>
 														</tr>
 													</thead>
 													<tbody>
 														<tr>
-															<td>이름</td>
-															<td>탁성대</td>
-															<td>수정</td>
+															<td>제목</td>
+															<td>축제 이미지 오타</td>
 														</tr>
 														<tr>
 															<td>아이디</td>
 															<td>abcd1234</td>
-															<td>수정</td>
 														</tr>
 														<tr>
-															<td>비밀번호</td>
-															<td>********</td>
-															<td>수정</td>
+															<td>상세내용</td>
+															<td>축제 페이지 오타가 났어요. 내용은
+																축제 – 여의도벚꽃축체(축제) 라고 되어있어요.
+															   수정 부탁드립니다.
+															   </td>
 														</tr>
 														<tr>
-															<td>닉네임</td>
-															<td>탁창대</td>
-															<td>수정</td>
-														</tr>
-														<tr>
-															<td>이메일</td>
-															<td>abcd1234@naver.com</td>
-															<td>수정</td>
-														</tr>
-														<tr>
-															<td>휴대폰번호</td>
-															<td>0101111111</td>
-															<td>수정</td>
-														</tr>
-														<tr>
-															<td>자주가는 지역</td>
-															<td>강남구</td>
-															<td>수정</td>
-														</tr>
-														<tr>
-															<td>프로필 사진</td>
-															<td>../profile/eadgnus</td>
-															<td>수정</td>
+															<td>등록일</td>
+															<td>2023-05-01</td>
 														</tr>
 													</tbody>
 												</table>
@@ -713,130 +712,6 @@
 													data-dismiss="modal"
 												>
 													Close
-												</button>
-												<button type="button" class="btn btn-primary">
-													Save changes
-												</button>
-											</div>
-										</div>
-									</div>
-									</div>
-								</td>
-								<td>
-									<span>O</span>
-								</td>
-								
-							</tr>
-							<tr>
-								<td class="table-plus">
-									<div class="name-avatar d-flex align-items-center">
-										<div class="txt">
-											<div class="weight-600">1</div>
-										</div>
-									</div>
-								</td>
-								<td>문의합니다</td>
-								<td>이미지가 이상해요</td>
-								<td>abcd1234</td>
-								<td>탁창대</td>
-								<td>2023-05-01</td>
-								<td>
-									<div class="table-actions">
-										<a
-									href="#"
-									class="btn-block"
-									data-toggle="modal"
-									data-target="#bd-example-modal-lg"
-									type="button"
-								>
-											<i class="icon-copy dw dw-edit2"></i>
-										</a>
-										<div
-									class="modal fade bs-example-modal-lg"
-									id="bd-example-modal-lg"
-									tabindex="-1"
-									role="dialog"
-									aria-labelledby="myLargeModalLabel"
-									aria-hidden="true"
-								>
-									<div class="modal-dialog modal-lg modal-dialog-centered">
-										<div class="modal-content">
-											<div class="modal-header">
-												<h4 class="modal-title" id="myLargeModalLabel">
-													사용자 정보
-												</h4>
-												<button
-													type="button"
-													class="close"
-													data-dismiss="modal"
-													aria-hidden="true"
-												>
-													×
-												</button>
-											</div>
-											<div class="modal-body">
-												<table class="data-table table nowrap reverseTable">
-													<thead>
-														<tr>
-															<td>번호</td>
-															<td>1</td>
-															<td>수정</td>
-														</tr>
-													</thead>
-													<tbody>
-														<tr>
-															<td>이름</td>
-															<td>탁성대</td>
-															<td>수정</td>
-														</tr>
-														<tr>
-															<td>아이디</td>
-															<td>abcd1234</td>
-															<td>수정</td>
-														</tr>
-														<tr>
-															<td>비밀번호</td>
-															<td>********</td>
-															<td>수정</td>
-														</tr>
-														<tr>
-															<td>닉네임</td>
-															<td>탁창대</td>
-															<td>수정</td>
-														</tr>
-														<tr>
-															<td>이메일</td>
-															<td>abcd1234@naver.com</td>
-															<td>수정</td>
-														</tr>
-														<tr>
-															<td>휴대폰번호</td>
-															<td>0101111111</td>
-															<td>수정</td>
-														</tr>
-														<tr>
-															<td>자주가는 지역</td>
-															<td>강남구</td>
-															<td>수정</td>
-														</tr>
-														<tr>
-															<td>프로필 사진</td>
-															<td>../profile/eadgnus</td>
-															<td>수정</td>
-														</tr>
-													</tbody>
-												</table>
-											</div>
-											<div class="modal-footer">
-												<button
-													type="button"
-													class="btn btn-secondary"
-													data-dismiss="modal"
-												>
-													Close
-												</button>
-												<button type="button" class="btn btn-primary">
-													Save changes
 												</button>
 											</div>
 										</div>
